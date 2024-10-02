@@ -117,7 +117,7 @@ app.post("/image-upload", upload.single("image"), async (req, res) => {
             return res.status(400).json({ error: true, message: "No image uploaded" });
         }
 
-        const imageUrl = `http://localhost:8000/uploads/${req.file.filename}`;
+        const imageUrl = `https://journey-story-6ldh.onrender.com/uploads/${req.file.filename}`;
         //console.log(`Image uploaded successfully: ${imageUrl}`);
         res.status(200).json({ imageUrl });
     } catch (error) {
